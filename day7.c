@@ -1,40 +1,38 @@
-Q11
+Q13
 #include <stdio.h>
 
 int main() {
-    int num;                         
+    int year;                       
 
-    printf("Enter an integer: ");      
-    scanf("%d", &num);                  
+    printf("Enter a year: ");       
+    scanf("%d", &year);              
 
-    if (num % 2 == 0)                
-        printf("%d is even", num);      
+    
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+        printf("Leap year");          
     else
-        printf("%d is odd", num);     
+        printf("Not a leap year");     
 
     return 0;                         
 }
 
 
-Q12: 
+Q14
 
 #include <stdio.h>
 
 int main() {
-    int num;                      
+    char ch;                         
 
-    printf("Enter an integer: ");   
-    scanf("%d", &num);             
+    printf("Enter a character: ");       
+    scanf("%c", &ch);                      
 
-    if (num >= 0) {                    
-        if (num == 0)                 
-            printf("Zero");            
-        else
-            printf("Positive");        
-    }
-    else {
-        printf("Negative");           
-    }
+    
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+        printf("Vowel");                 
+    else
+        printf("Consonant");              
 
-    return 0;                         
+    return 0;                             
 }
