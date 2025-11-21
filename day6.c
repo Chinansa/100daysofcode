@@ -1,40 +1,38 @@
-Q9
+Q11
 #include <stdio.h>
-#include <math.h>  
 
 int main() {
-    float principal, rate, time;        
-    float simpleInterest, compoundInterest;
+    int num;                         
 
-    printf("Enter principal, rate and time: ");   
-    scanf("%f %f %f", &principal, &rate, &time); 
+    printf("Enter an integer: ");      
+    scanf("%d", &num);                  
 
-    simpleInterest = (principal * rate * time) / 100;  
-    compoundInterest = principal * pow((1 + rate / 100), time) - principal;  
+    if (num % 2 == 0)                
+        printf("%d is even", num);      
+    else
+        printf("%d is odd", num);     
 
-    printf("Simple Interest=%.2f, Compound Interest=%.2f", simpleInterest, compoundInterest);
-                                                      
-
-    return 0;                                        
+    return 0;                         
 }
 
-Q10
-
+Q12
 #include <stdio.h>
 
 int main() {
-    int totalSeconds, hours, minutes, seconds; 
+    int num;                      
 
-    printf("Enter time in seconds: ");         
-    scanf("%d", &totalSeconds);                
+    printf("Enter an integer: ");   
+    scanf("%d", &num);             
 
-    hours = totalSeconds / 3600;                
-    totalSeconds = totalSeconds % 3600;        
+    if (num >= 0) {                    
+        if (num == 0)                 
+            printf("Zero");            
+        else
+            printf("Positive");        
+    }
+    else {
+        printf("Negative");           
+    }
 
-    minutes = totalSeconds / 60;             
-    seconds = totalSeconds % 60;               
-
-    printf("%d:%d:%d", hours, minutes, seconds); 
-
-    return 0;                                  
+    return 0;                         
 }
